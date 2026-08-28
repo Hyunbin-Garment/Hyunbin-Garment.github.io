@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#201b17">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="玄彬男装品牌加盟图册与加盟咨询。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="玄彬男装｜品牌加盟图册">
+  <meta property="og:description" content="查看玄彬男装品牌理念、经销支持与加盟联系方式。">
+  <meta property="og:image" content="https://hyunbin-garment.github.io/page-1.jpg">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>玄彬男装｜品牌加盟图册</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #1f1a16;
+      --paper: #efe4d2;
+      --gold: #b89a70;
+      --cream: #fffaf1;
+      --wechat: #07c160;
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: var(--ink);
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 50% -10%, rgba(184, 154, 112, .16), transparent 32rem),
+        var(--ink);
+      color: var(--cream);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .progress {
+      position: fixed;
+      z-index: 50;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      transform: scaleX(0);
+      transform-origin: left center;
+      background: linear-gradient(90deg, #d9bd91, #fff3dc);
+      box-shadow: 0 0 14px rgba(217, 189, 145, .55);
+      pointer-events: none;
+    }
+
+    .intro {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: min(100%, 620px);
+      margin: 0 auto;
+      padding: calc(15px + env(safe-area-inset-top, 0px)) 18px 15px;
+      color: rgba(255, 250, 241, .76);
+      font-size: 12px;
+      letter-spacing: .16em;
+    }
+
+    .intro strong {
+      color: var(--cream);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: .22em;
+    }
+
+    .intro span:last-child {
+      letter-spacing: .08em;
+    }
+
+    .book {
+      width: min(100%, 620px);
+      margin: 0 auto;
+      overflow: hidden;
+      background: #d8c7ad;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, .34);
+    }
+
+    .page {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0;
+      background: #e8dbc8;
+    }
+
+    .page + .page {
+      margin-top: 1px;
+    }
+
+    .footer {
+      width: min(100%, 620px);
+      margin: 0 auto;
+      padding: 26px 20px calc(104px + var(--safe-bottom));
+      text-align: center;
+      color: rgba(255, 250, 241, .62);
+      font-size: 12px;
+      line-height: 1.8;
+      letter-spacing: .08em;
+    }
+
+    .footer strong {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--cream);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: .18em;
+    }
+
+    .download {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 13px;
+      padding: 8px 12px;
+      border: 1px solid rgba(255, 250, 241, .18);
+      border-radius: 999px;
+      color: rgba(255, 250, 241, .72);
+      text-decoration: none;
+      letter-spacing: .03em;
+    }
+
+    .wechat-fab {
+      position: fixed;
+      z-index: 40;
+      right: max(16px, env(safe-area-inset-right, 0px));
+      bottom: calc(18px + var(--safe-bottom));
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      min-height: 44px;
+      padding: 0 15px 0 12px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--wechat);
+      color: white;
+      box-shadow: 0 10px 28px rgba(7, 193, 96, .32), 0 3px 12px rgba(0, 0, 0, .28);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .wechat-fab svg {
+      width: 21px;
+      height: 21px;
+      flex: none;
+      fill: currentColor;
+    }
+
+    .overlay {
+      position: fixed;
+      z-index: 80;
+      inset: 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 16px 16px calc(16px + var(--safe-bottom));
+      background: rgba(12, 10, 8, .66);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+    }
+
+    .overlay[hidden] {
+      display: none;
+    }
+
+    .sheet {
+      width: min(100%, 430px);
+      padding: 23px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 22px;
+      background: #fffaf1;
+      color: #2b241e;
+      box-shadow: 0 28px 80px rgba(0, 0, 0, .42);
+      animation: rise .22s ease-out;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .sheet-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .sheet h2 {
+      margin: 0;
+      font-size: 21px;
+      line-height: 1.25;
+      letter-spacing: .04em;
+    }
+
+    .sheet p {
+      margin: 8px 0 0;
+      color: #75675b;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .close {
+      width: 34px;
+      height: 34px;
+      flex: none;
+      border: 0;
+      border-radius: 50%;
+      background: #eee3d4;
+      color: #4c4036;
+      font-size: 22px;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .wechat-id {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 19px 0 14px;
+      padding: 14px 15px;
+      border: 1px solid #e7dac9;
+      border-radius: 14px;
+      background: #f5ecdf;
+    }
+
+    .wechat-id span {
+      color: #806f61;
+      font-size: 12px;
+    }
+
+    .wechat-id strong {
+      display: block;
+      margin-top: 3px;
+      color: #2b241e;
+      font-size: 20px;
+      letter-spacing: .04em;
+    }
+
+    .copy-mini {
+      flex: none;
+      padding: 8px 11px;
+      border: 0;
+      border-radius: 9px;
+      background: #ded0bd;
+      color: #43372e;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      border: 0;
+      border-radius: 12px;
+      background: #2d261f;
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .action.primary {
+      background: var(--wechat);
+    }
+
+    .hint {
+      text-align: center;
+    }
+
+    .toast {
+      position: fixed;
+      z-index: 100;
+      left: 50%;
+      bottom: calc(34px + var(--safe-bottom));
+      transform: translate(-50%, 12px);
+      padding: 9px 13px;
+      border-radius: 999px;
+      background: rgba(24, 20, 17, .92);
+      color: white;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, .26);
+      font-size: 13px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .18s ease, transform .18s ease;
+      white-space: nowrap;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    @media (min-width: 680px) {
+      .intro {
+        padding-top: 25px;
+        padding-bottom: 20px;
+      }
+
+      .book {
+        border-radius: 4px;
+      }
+
+      .footer {
+        padding-bottom: 110px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .sheet { animation: none; }
+      .toast { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="intro" aria-label="页面说明">
+    <strong>玄彬 · HYUNBIN</strong>
+    <span>向下滑动浏览图册</span>
+  </header>
+
+  <main class="book" aria-label="玄彬品牌加盟图册">
+    <img class="page" src="page-1.jpg" alt="玄彬特许经销商证书封面" width="1102" height="1469" fetchpriority="high">
+    <img class="page" src="page-2.jpg" alt="玄彬品牌加盟手册封面" width="1102" height="1469" loading="lazy" decoding="async">
+    <img class="page" src="page-3.jpg" alt="玄彬专卖授权书" width="1102" height="1469" loading="lazy" decoding="async">
+    <img class="page" src="page-4.jpg" alt="玄彬品牌理念" width="1102" height="1469" loading="lazy" decoding="async">
+    <img class="page" src="page-5.jpg" alt="玄彬经销支持" width="1102" height="1469" loading="lazy" decoding="async">
+    <img class="page" src="page-6.jpg" alt="玄彬品牌介绍与加盟联系方式" width="1102" height="1469" loading="lazy" decoding="async">
+  </main>
+
+  <footer class="footer">
+    <strong>玄彬 HYUNBIN</strong>
+    简约有度 · 质感为先 · 从容有型
+    <br>
+    <a class="download" href="brochure.pdf" download>下载完整加盟图册 PDF</a>
+  </footer>
+
+  <button class="wechat-fab" id="wechatButton" type="button" aria-haspopup="dialog" aria-controls="wechatSheet">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.7 3.2c-4.5 0-8.1 2.9-8.1 6.5 0 2.1 1.2 3.9 3.1 5.1l-.8 2.5 2.9-1.5c.9.3 1.9.4 2.9.4h.5c-.2-.6-.3-1.2-.3-1.8 0-3.5 3.3-6.3 7.4-6.3h.4C16.8 5.3 13.7 3.2 9.7 3.2Zm-2.8 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm5.5 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm10 6.2c0-2.9-2.9-5.3-6.4-5.3s-6.4 2.4-6.4 5.3 2.9 5.3 6.4 5.3c.8 0 1.6-.1 2.3-.4l2.4 1.3-.7-2.1c1.5-1 2.4-2.5 2.4-4.1Zm-8.5-.9a.8.8 0 1 1 0-1.6.8.8 0 0 1 0 1.6Zm4.4 0a.8.8 0 1 1 0-1.6.8.8 0 0 1 0 1.6Z"/></svg>
+    添加微信
+  </button>
+
+  <div class="overlay" id="wechatSheet" role="dialog" aria-modal="true" aria-labelledby="wechatTitle" hidden>
+    <section class="sheet">
+      <div class="sheet-head">
+        <div>
+          <h2 id="wechatTitle">添加加盟微信</h2>
+          <p>电话、短信、微信同号</p>
+        </div>
+        <button class="close" id="closeSheet" type="button" aria-label="关闭">×</button>
+      </div>
+
+      <div class="wechat-id">
+        <div>
+          <span>微信号</span>
+          <strong id="wechatId">18993104444</strong>
+        </div>
+        <button class="copy-mini" id="copyMini" type="button">复制</button>
+      </div>
+
+      <div class="actions">
+        <button class="action" id="copyButton" type="button">复制微信号</button>
+        <a class="action primary" id="openWechat" href="weixin://">打开微信</a>
+      </div>
+      <p class="hint">如未自动打开，请先复制微信号，再进入微信搜索添加。</p>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">微信号已复制</div>
+
+  <script>
+    (() => {
+      const wechatId = '18993104444';
+      const sheet = document.getElementById('wechatSheet');
+      const openButton = document.getElementById('wechatButton');
+      const closeButton = document.getElementById('closeSheet');
+      const copyButtons = [document.getElementById('copyButton'), document.getElementById('copyMini')];
+      const toast = document.getElementById('toast');
+      const progress = document.getElementById('progress');
+      let toastTimer;
+
+      const showSheet = () => {
+        sheet.hidden = false;
+        document.body.style.overflow = 'hidden';
+        closeButton.focus();
+      };
+
+      const hideSheet = () => {
+        sheet.hidden = true;
+        document.body.style.overflow = '';
+        openButton.focus();
+      };
+
+      const showToast = (message) => {
+        toast.textContent = message;
+        toast.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toast.classList.remove('show'), 1800);
+      };
+
+      const fallbackCopy = () => {
+        const input = document.createElement('textarea');
+        input.value = wechatId;
+        input.setAttribute('readonly', '');
+        input.style.position = 'fixed';
+        input.style.opacity = '0';
+        document.body.appendChild(input);
+        input.select();
+        const copied = document.execCommand('copy');
+        input.remove();
+        return copied;
+      };
+
+      const copyWechat = async () => {
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(wechatId);
+          } else if (!fallbackCopy()) {
+            throw new Error('copy failed');
+          }
+          showToast('微信号已复制：' + wechatId);
+        } catch (error) {
+          showToast('请长按微信号复制');
+        }
+      };
+
+      const updateProgress = () => {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        const value = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+        progress.style.transform = `scaleX(${value})`;
+      };
+
+      openButton.addEventListener('click', showSheet);
+      closeButton.addEventListener('click', hideSheet);
+      copyButtons.forEach(button => button.addEventListener('click', copyWechat));
+      document.getElementById('openWechat').addEventListener('click', copyWechat);
+
+      sheet.addEventListener('click', (event) => {
+        if (event.target === sheet) hideSheet();
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !sheet.hidden) hideSheet();
+      });
+
+      window.addEventListener('scroll', updateProgress, { passive: true });
+      window.addEventListener('resize', updateProgress);
+      updateProgress();
+    })();
+  </script>
+</body>
+</html>
